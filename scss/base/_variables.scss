@@ -31,9 +31,11 @@
 }
 
 @media (min-width: 48em) {
-  --font-size-400: 2rem;
-  --font-size-200: 1rem;
-  --font-size-100: 1rem;
+  :root {
+    --font-size-400: 2rem;
+    --font-size-200: 1rem;
+    --font-size-100: 1rem;
+  }
 }
 
 

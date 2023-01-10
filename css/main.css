@@ -1,19 +1,152 @@
-/* Error: expected "{".
- *    ,
- * 34 |   --font-size-400: 2rem;
- *    |                        ^
- *    '
- *   base\_variables.scss 34:24  @forward
- *   base\_index.scss 3:1        @forward
- *   main.scss 1:1               root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: 'Error: expected "{".\a    \2577 \a 34 \2502    --font-size-400: 2rem;\d\a    \2502                         ^\a    \2575 \a   base\\_variables.scss 34:24  @forward\a   base\\_index.scss 3:1        @forward\a   main.scss 1:1               root stylesheet';
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+html {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-ubuntu);
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.flow > * + * {
+  margin-top: var(--flow-space);
+}
+
+.font-size-400 {
+  font-size: var(--font-size-400);
+}
+
+.font-size-300 {
+  font-size: var(--font-size-300);
+}
+
+.font-size-200 {
+  font-size: var(--font-size-200);
+}
+
+.font-size-100 {
+  font-size: var(--font-size-100);
+}
+
+:root {
+  --marine-blue: hsl(213, 96%, 18%);
+  --purplish-blue: hsl(243, 100%, 62%);
+  --pastel-blue: hsl(228, 100%, 84%);
+  --light-blue: hsl(206, 94%, 87%);
+  --strawberry-red: hsl(354, 84%, 57%);
+  --cool-gray: hsl(231, 11%, 63%);
+  --light-gray: hsl(229, 24%, 87%);
+  --magnolia: hsl(217, 100%, 97%);
+  --alabaster: hsl(217, 100%, 97%);
+  --white: hsl(0, 0%, 100%);
+  --font-ubuntu: "Ubuntu", sans-serif;
+  --font-size-400: 1.5rem;
+  --font-size-300: 1rem;
+  --font-size-200: 0.875rem;
+  --font-size-100: 0.75rem;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --flow-space: 1rem;
+  --gap: 1rem;
+}
+
+@media (min-width: 48em) {
+  :root {
+    --font-size-400: 2rem;
+    --font-size-200: 1rem;
+    --font-size-100: 1rem;
+  }
+}
+.container {
+  max-width: 90rem;
+  padding-inline: 1rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex--gap {
+  gap: var(--gap);
+}
+
+.flex--center {
+  justify-content: center;
+  align-items: center;
+}
+
+.flex--justify-space-between {
+  justify-content: space-between;
+}
+
+.flex--justify-center {
+  justify-content: center;
+}
+
+.flex--align-center {
+  align-items: center;
+}
+
+.flex--column {
+  flex-direction: column;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid--items-center {
+  place-items: center;
+}
+
+.grid--content-center {
+  place-content: center;
+}
+
+.grid--gap {
+  gap: var(--gap);
+}
+
+/*# sourceMappingURL=main.css.map */
