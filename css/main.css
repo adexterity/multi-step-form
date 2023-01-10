@@ -1,52 +1,19 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+/* Error: expected "{".
+ *    ,
+ * 34 |   --font-size-400: 2rem;
+ *    |                        ^
+ *    '
+ *   base\_variables.scss 34:24  @forward
+ *   base\_index.scss 3:1        @forward
+ *   main.scss 1:1               root stylesheet */
 
-img,
-picture {
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
   display: block;
-  max-width: 100%;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: expected "{".\a    \2577 \a 34 \2502    --font-size-400: 2rem;\d\a    \2502                         ^\a    \2575 \a   base\\_variables.scss 34:24  @forward\a   base\\_index.scss 3:1        @forward\a   main.scss 1:1               root stylesheet';
 }
-
-button,
-input {
-  font: inherit;
-}
-
-html {
-  width: 100%;
-  overflow-x: hidden;
-}
-
-html:focus-within {
-  scroll-behavior: smooth;
-}
-
-body {
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
-  overflow-x: hidden;
-  position: relative;
-}
-
-/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
-@media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-    scroll-behavior: auto;
-  }
-  *,
-*::before,
-*::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
-
-/*# sourceMappingURL=main.css.map */
