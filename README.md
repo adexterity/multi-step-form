@@ -2,7 +2,7 @@
 
 ### Links
 
-- Live Site URL: [https://space-tourism-website-10.vercel.app/]
+- Live Site URL: [https://multi-step-form-10.vercel.app/]
 
 ### Built with
 
@@ -10,6 +10,7 @@
 - SCSS
 - Vanilla JS
 
-## Author
+## Authors
 1. [@krutagna10](https://www.frontendmentor.io/profile/krutagna10)
-2. [KossakowskaKarolina](https://www.frontendmentor.io/profile/KossakowskaKarolina)
+2. [@KossakowskaKarolina](https://www.frontendmentor.io/profile/KossakowskaKarolina)
+3. [@adexterity](https://www.frontendmentor.io/profile/adexterity)
