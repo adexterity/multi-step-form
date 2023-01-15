@@ -1,211 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <!-- displays site properly based on user's device -->
 
     <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="images/favicon-32x32.png"
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="images/favicon-32x32.png"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link
-      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
-      rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
+            rel="stylesheet"
     />
 
     <title>Frontend Mentor | Multi-step form</title>
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/main.css"/>
     <script defer src="js/script.js"></script>
-  </head>
-  <body>
-    <div class="container">
-      <!-- navigation section -->
-      <nav class="main-nav" aria-label="Main">
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <div class="number">1</div>
-            <div class="step-content">
-              <h3 class="heading">STEP 1</h3>
-              <a href="#" class="main-nav__link">YOUR INFO</a>
-            </div>
-          </li>
-          <li class="main-nav__item">
-            <div class="number">2</div>
-            <h3 class="heading">STEP 2</h3>
-            <a href="#" class="main-nav__link">SELECT PLAN</a>
-          </li>
-          <li class="main-nav__item">
-            <div class="number">3</div>
-            <h3 class="heading">STEP 3</h3>
-            <a href="#" class="main-nav__link">ADD-ONS</a>
-          </li>
-          <li class="main-nav__item">
-            <div class="number">4</div>
-            <h3 class="heading">STEP 4</h3>
-            <a href="#" class="main-nav__link">SUMMARY</a>
-          </li>
+</head>
+<body>
+<div class="container">
+    <!-- Navigation section -->
+    <nav class="nav" aria-label="Main">
+        <ul class="nav__list">
+            <li class="nav__item">
+                <div class="nav__step-number">1</div>
+                <div class="nav__content">
+                    <h3 class="nav__step">STEP 1</h3>
+                    <p class="nav__description">YOUR INFO</p>
+                </div>
+            </li>
+            <li class="nav__item">
+                <div class="nav__step-number">2</div>
+                <div class="nav__content">
+                    <h3 class="nav__step">STEP 2</h3>
+                    <p class="nav__description">SELECT PLAN</p>
+                </div>
+            </li>
+            <li class="nav__item">
+                <div class="nav__step-number">3</div>
+                <div class="nav__content">
+                    <h3 class="nav__step">STEP 3</h3>
+                    <p class="nav__description">ADD-ONS</p>
+                </div>
+            </li>
+            <li class="nav__item">
+                <div class="nav__step-number">4</div>
+                <div class="nav__content">
+                    <h3 class="nav__step">STEP 4</h3>
+                    <p class="nav__description">SUMMARY</p>
+                </div>
+            </li>
         </ul>
-      </nav>
+    </nav>
 
-      <!-- navigation end -->
-      <!-- info section -->
-      <section class="info-section">
-        <h2 class="info-heading">Personal info</h2>
-        <p>Please provide your name, email address, and phone number.</p>
-        <form action="">
-          <div class="input-group">
-            <label for="myInput" class="input-group__label">Name</label>
-            <input
-              type="text"
-              id="myName"
-              class="input-group__input"
-              placeholder="e.g. Stephen King"
-            />
+    <!-- Info section -->
+    <section class="info">
+        <h1 class="info__heading">Personal info</h1>
+        <p class="info__text">Please provide your name, email address, and phone number.</p>
+        <form action="#" class="info__form">
+            <div class="info__input-wrapper">
+                <label for="info__name" class="info__input-label">Name</label>
+                <input type="text" name="info__name" id="info__name" class="info__form-input" placeholder="e.g. Stephen King"/>
+            </div>
+            <div class="info__input-wrapper">
+                <label for="info__email">Email</label>
+                <input type="email" name="info__email" id="info__email" class="info__form-input"  placeholder="e.g. stephenking@lorem.com"/>
+            </div>
+          <div class="info__input-wrapper">
+              <label for="info__number">Phone Number</label>
+              <input type="number" name="info__number" id="info__number" class="info__form-input" placeholder="e.g. +1234567890">
           </div>
-          <div class="input-group">
-            <label for="myInput" class="input-group__label"
-              >Email Address</label
-            >
-            <input
-              type="email"
-              id="myEmail"
-              class="input-group__input"
-              placeholder="e.g. stephenking@lorem.com"
-            />
-          </div>
-          <div class="input-group">
-            <label for="myInput" class="input-group__label">Phone Number</label>
-            <input
-              type="number"
-              id="myNumber"
-              class="input-group__input"
-              placeholder="e.g. +1234567890"
-            />
-          </div>
-
-          <a href="#" class="button">
-            <span class="button__body">My Button</span>
-          </a>
+            <button class="info__btn">My Button</button>
         </form>
-      </section>
+    </section>
 
-      <!-- info section end -->
+    <!-- info section end -->
 
-      <!-- plan section start -->
-      <section class="plan-section">
+    <!-- plan section start -->
+    <section class="plan-section">
         <div class="plan-heading">Select your plan</div>
         <p class="plan-text">
-          You have the option of monthly or yearly billing.
+            You have the option of monthly or yearly billing.
         </p>
 
         <div class="cards-containers">
-          <article class="card">
-            <header class="card__header">
-              <!-- <div class="card-icon">icon goes here</div> -->
-              <h2 class="card__title">Arcade</h2>
-            </header>
-            <div class="card__body">
-              <p class="card__copy">$9/mo</p>
-            </div>
-          </article>
-          <article class="card">
-            <header class="card__header">
-              <!-- <div class="card-icon">icon goes here</div> -->
-              <h2 class="card__title">Advanced</h2>
-            </header>
-            <div class="card__body">
-              <p class="card__copy">$12/mo</p>
-            </div>
-          </article>
-          <article class="card">
-            <header class="card__header">
-              <!-- <div class="card-icon">icon goes here</div> -->
-              <h2 class="card__title">Pro</h2>
-            </header>
-            <div class="card__body">
-              <p class="card__copy">$15/mo</p>
-            </div>
-          </article>
+            <article class="card">
+                <header class="card__header">
+                    <!-- <div class="card-icon">icon goes here</div> -->
+                    <h2 class="card__title">Arcade</h2>
+                </header>
+                <div class="card__body">
+                    <p class="card__copy">$9/mo</p>
+                </div>
+            </article>
+            <article class="card">
+                <header class="card__header">
+                    <!-- <div class="card-icon">icon goes here</div> -->
+                    <h2 class="card__title">Advanced</h2>
+                </header>
+                <div class="card__body">
+                    <p class="card__copy">$12/mo</p>
+                </div>
+            </article>
+            <article class="card">
+                <header class="card__header">
+                    <!-- <div class="card-icon">icon goes here</div> -->
+                    <h2 class="card__title">Pro</h2>
+                </header>
+                <div class="card__body">
+                    <p class="card__copy">$15/mo</p>
+                </div>
+            </article>
         </div>
-        <div class="sub">Monthly <input type="checkbox" /> Yearly</div>
+        <div class="sub">Monthly <input type="checkbox"/> Yearly</div>
         <div class="bottom">
-          <a href="#"> Go Back</a>
-          <button class="btn btn-next">Next Step</button>
+            <a href="#"> Go Back</a>
+            <button class="btn btn-next">Next Step</button>
         </div>
-      </section>
+    </section>
 
-      <!-- plan section end -->
+    <!-- plan section end -->
 
-      <!-- addon section start -->
-      <section class="addon-section">
+    <!-- addon section start -->
+    <section class="addon-section">
         <h2 class="addon-heading">Pick add-ons</h2>
         <p class="addons-text">Add-ons enhance your gaming experience</p>
         <div class="addon-boxes">
-          <div class="addon-box">
-            <input type="checkbox" />
-            <div class="addon-box-text">
-              Online service <br />
-              Access to multiplayer games
+            <div class="addon-box">
+                <input type="checkbox"/>
+                <div class="addon-box-text">
+                    Online service <br/>
+                    Access to multiplayer games
+                </div>
+                <p>+$1/mo</p>
             </div>
-            <p>+$1/mo</p>
-          </div>
-          <div class="addon-box">
-            <input type="checkbox" />
-            <div class="addon-box-text">
-              Larger storage <br />
-              Extra 1TB of cloud save
+            <div class="addon-box">
+                <input type="checkbox"/>
+                <div class="addon-box-text">
+                    Larger storage <br/>
+                    Extra 1TB of cloud save
+                </div>
+                <p>+$2/mo</p>
             </div>
-            <p>+$2/mo</p>
-          </div>
-          <div class="addon-box">
-            <input type="checkbox" />
-            <div class="addon-box-text">
-              /customizable profile <br />
-              Custom theme on your profile
+            <div class="addon-box">
+                <input type="checkbox"/>
+                <div class="addon-box-text">
+                    /customizable profile <br/>
+                    Custom theme on your profile
+                </div>
+                <p>+$2/mo</p>
             </div>
-            <p>+$2/mo</p>
-          </div>
         </div>
 
         <div class="bottom">
-          <a href="#"> Go Back</a>
-          <button class="btn btn-next">Next Step</button>
+            <a href="#"> Go Back</a>
+            <button class="btn btn-next">Next Step</button>
         </div>
-      </section>
+    </section>
 
-      <!-- addon section end -->
+    <!-- addon section end -->
 
-      <!-- summary section start -->
-      <section class="summary-section">
+    <!-- summary section start -->
+    <section class="summary-section">
         <h2 class="summary-heading">Finishing up</h2>
         <div class="summary-text">
-          Double-check everything looks OK before confirming.
+            Double-check everything looks OK before confirming.
         </div>
         <div class="summary-boxes">
-          <div>Arcade (MOnthly) <br />Change</div>
-          <div>$9/mo</div>
-          <hr />
-          <p>Online service</p>
-          <p>+$1/mo</p>
-          <p>Larger storage</p>
-          <p>+$2/mo</p>
+            <div>Arcade (MOnthly) <br/>Change</div>
+            <div>$9/mo</div>
+            <hr/>
+            <p>Online service</p>
+            <p>+$1/mo</p>
+            <p>Larger storage</p>
+            <p>+$2/mo</p>
         </div>
         <div class="total">
-          <p>Total(per month)</p>
-          <p>+$12/mo</p>
+            <p>Total(per month)</p>
+            <p>+$12/mo</p>
         </div>
         <div class="bottom">
-          <a href="#" class="btn btn-back"> Go Back</a>
-          <button class="btn btn-confirm">Confirm</button>
+            <a href="#" class="btn btn-back"> Go Back</a>
+            <button class="btn btn-confirm">Confirm</button>
         </div>
-      </section>
+    </section>
 
-      <!-- summary section end -->
-    </div>
-  </body>
+    <!-- summary section end -->
+</div>
+</body>
 </html>
