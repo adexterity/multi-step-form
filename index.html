@@ -61,57 +61,63 @@
     </section>
     <section class="main">
         <div class="main__body">
-            <div class="info flow">
-
+            <div class="info flow tab">
                 <h1 class="info__heading primary-heading">Personal info</h1>
                 <p class="info__text text-gray">Please provide your name, email address, and phone number.</p>
                 <form action="#" class="info__form flow">
                     <div class="info__input-wrapper">
                         <label for="info__name" class="info__input-label">Name</label>
-                        <input type="text" name="info__name" id="info__name" class="info__form-input"
+                        <input type="text" name="info__name" id="info__name" class="info__form-input" 
                                placeholder="e.g. Stephen King"/>
                     </div>
                     <div class="info__input-wrapper">
                         <label for="info__email" class="info__input-label">Email</label>
-                        <input type="email" name="info__email" id="info__email" class="info__form-input"
+                        <input type="email" name="info__email" id="info__email" class="info__form-input" 
                                placeholder="e.g. stephenking@lorem.com"/>
                     </div>
                     <div class="info__input-wrapper">
                         <label for="info__number" class="info__input-label">Phone Number</label>
-                        <input type="number" name="info__number" id="info__number" class="info__form-input"
+                        <input type="number" name="info__number" id="info__number" class="info__form-input" 
                                placeholder="e.g. +1234567890">
                     </div>
+                </form>
+            </div>
 
+            <div class="plan flow tab">
+                <h1 class="plan__heading primary-heading">Select your plan</h1>
+                <p class="plan__text text-gray">You have the option of monthly or yearly billing.</p>
+                <form action="#" class="plan__form">
+                    <div class="plan__card">
+                        <label for="form__radio--arcade">1</label>
+                        <input type="radio" name="form__radio" id="form__radio--arcade">
+                    </div>
+                    <div>
+                        <label for="form__radio--advanced">2</label>
+                        <input type="radio" name="form__radio" id="form__radio--advanced">
+                    </div>
+                    <div>
+                        <label for="form__radio--pro">3</label>
+                        <input type="radio" name="form__radio" id="form__radio--pro">
+                    </div>
+                    <div>   
+                        <label class="form__switch">
+                            <input type="checkbox">
+                            <span class="form__slider"></span>
+                        </label>
+                    </div>     
                 </form>
             </div>
         </div>
+
         <div class="main__footer">
-            <button class="main__btn btn btn--dark">Next Step</button>
+            <button class="main__btn btn btn-light" id="prevBtn" onclick="nextPrev(-1)">Go back</button>
+            <button class="main__btn btn btn--dark" id="nextBtn" onclick="nextPrev(1)">Next Step</button>
         </div>
 
 
-        <!--    &lt;!&ndash; Plan section &ndash;&gt;-->
-        <!--    <section class="plan">-->
-        <!--        <h1 class="plan__heading">Select your plan</h1>-->
-        <!--        <p class="plan__text">You have the option of monthly or yearly billing.</p>-->
-        <!--        <form action="#" class="plan__form">-->
-        <!--            <div class="plan__card">-->
-        <!--                <label for="form__radio&#45;&#45;arcade">1</label>-->
-        <!--                <input type="radio" name="form__radio" id="form__radio&#45;&#45;arcade">-->
-        <!--            </div>-->
-        <!--            <div>-->
-        <!--                <label for="form__radio&#45;&#45;advanced">2</label>-->
-        <!--                <input type="radio" name="form__radio" id="form__radio&#45;&#45;advanced">-->
-        <!--            </div>-->
 
-        <!--            <div>-->
-        <!--                <label for="form__radio&#45;&#45;pro">3</label>-->
-        <!--                <input type="radio" name="form__radio" id="form__radio&#45;&#45;pro">-->
-        <!--            </div>-->
-        <!--        </form>-->
-        <!--    </section>-->
+
         <!--    <section class="plan-section">-->
-
         <!--        <div class="cards-containers">-->
         <!--            <article class="card">-->
         <!--                <header class="card__header">-->
