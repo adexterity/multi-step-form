@@ -1,34 +1,66 @@
-// Global variables
-let currentTab = 1;
+'use strict';
 
+// Elements
+const tabs = document.querySelectorAll('.tab');
+const btnNext = document.querySelector('.main__btn--next');
+const btnPrev = document.querySelector('.main__btn--prev');
+const btnConfirm = document.querySelector('.main__btn--confirm');
 
-// Display active tab
+// Global Variables
+let currentTab = 0;
 
-showTab(currentTab);
+// Setting display of form page as block
+// tabs[currentTab].style.display = 'block';
 
-function showTab(n) {
-    let tab = document.getElementsByClassName('tab');
-    
-    // Show active tab
-    tab[n].style.display = 'block'
-
-    // Show accurate button
-    n == 0 
-        ? document.getElementById('prevBtn').style.display = 'none'
-        : document.getElementById('nextBtn').style.display = 'inline';
-
-    n == (tab.length - 1)
-        ? document.getElementById('nextBtn').innerHTML = 'Confirm'
-        : document.getElementById('nextBtn').innerHTML = 'Next Step';
+// Function for changing tab
+const changeCurrentTab = () => {
+    tabs.forEach((tab, index) => {
+        if (currentTab === index) {
+            tab.classList.add('active-tab');
+        } else {
+            tab.classList.remove('active-tab');
+        }
+    })
 }
 
-// Change tab on click
+// When the user clicks on next button
+btnNext.addEventListener('click', () => {
+    currentTab++;
+    if (currentTab > 3) {
+        currentTab = 3;
+    }
+    changeCurrentTab();
+});
 
-function nextPrev(n) {
-    let tab = document.getElementsByClassName('tab');
-    tab[currentTab].style.display = 'none';
-    
-    currentTab = currentTab + n;
-    showTab(currentTab);
-}
+// When the user clicks on prev button
+btnPrev.addEventListener('click', () => {
+    currentTab--;
+    if (currentTab < 0) {
+        currentTab = 0;
+    }
+    changeCurrentTab();
+});
+
+
+
+// // Display active tab
+//
+// showTab(currentTab);
+//
+// function showTab(n) {
+//     let tab = document.getElementsByClassName('tab');
+//
+//     // Show active tab
+//     tab[n].style.display = 'block'
+//
+//     // Show accurate button
+//     n == 0
+//         ? document.getElementById('prevBtn').style.display = 'none'
+//         : document.getElementById('nextBtn').style.display = 'inline';
+//
+//     n == (tab.length - 1)
+//         ? document.getElementById('nextBtn').innerHTML = 'Confirm'
+//         : document.getElementById('nextBtn').innerHTML = 'Next Step';
+// }
+//
 

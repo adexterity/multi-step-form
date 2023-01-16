@@ -9,7 +9,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 18rem;
-  padding: 3rem 0;
+  padding: 3rem 1.5rem;
 
   &__list {
     justify-content: center;
@@ -85,10 +85,6 @@
     padding: 1rem 0.75rem;
   }
 
-  &__btn {
-    margin-left: auto;
-  }
-
   @media (min-width: 32em) {
     &__body {
       width: 85%;
@@ -110,6 +106,22 @@
   }
 }
 
+// buttons
+.main {
+  &__btn--prev {
+    display: none;
+  }
+
+  &__btn--next {
+    margin-left: auto;
+  }
+
+  &__btn--confirm {
+    display: none;
+  }
+}
+
+
 
 // 1. Info Page
 .info {
@@ -122,4 +134,13 @@
     padding: 0.5rem 1rem;
     border-radius: 0.25rem;
   }
+}
+
+
+.tab {
+  display: none;
+}
+
+.active-tab {
+  display: block;
 }
