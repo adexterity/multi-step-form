@@ -2,3 +2,124 @@
 @forward 'components';
 @forward 'layouts';
 
+// Navigation section
+.nav {
+  background-image: url('/images/bg-sidebar-mobile.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 18rem;
+  padding: 3rem 0;
+
+  &__list {
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  &__item {
+    list-style: none;
+  }
+
+  &__step-number {
+    border: 2px solid var(--white);
+    color: var(--white);
+    font-weight: var(--font-weight-bold);
+    border-radius: 50%;
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  &__step-number.active {
+    background-color: var(--light-blue);
+    border-color: var(--light-blue);
+    color: var(--marine-blue);
+  }
+
+  &__step {
+    font-size: var(--font-size-100);
+    color: var(--pastel-blue);
+  }
+
+  &__description {
+    color: var(--white);
+    font-size: var(--font-size-200);
+  }
+
+  &__content {
+    display: none;
+    text-transform: uppercase;
+  }
+
+  @media (min-width: 48em) {
+    & {
+      height: 100%;
+      background-image: url('/images/bg-sidebar-desktop.svg');
+    }
+
+    &__list {
+      flex-direction: column;
+      align-items: start;
+    }
+
+    &__content {
+      display: block;
+    }
+  }
+}
+
+// Main Section
+.main {
+  background-color: var(--alabaster);
+
+  &__body {
+    background-color: var(--white);
+    width: 95%;
+    transform: translateY(-8rem);
+    padding: 2rem 1rem;
+    border-radius: 0.5rem;
+    margin-inline: auto;
+  }
+
+  &__footer {
+    background-color: var(--white);
+    padding: 1rem 0.75rem;
+  }
+
+  &__btn {
+    margin-left: auto;
+  }
+
+  @media (min-width: 32em) {
+    &__body {
+      width: 85%;
+    }
+  }
+
+  @media (min-width: 48em) {
+    & {
+      position: static;
+      height: 100%;
+    }
+
+    &__body {
+      transform: translateY(0);
+      width: 100%;
+      border-radius: 0;
+      box-shadow: none;
+    }
+  }
+}
+
+
+// 1. Info Page
+.info {
+  &__input-label {
+    display: block;
+  }
+
+  &__form-input {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+  }
+}

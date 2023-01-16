@@ -28,11 +28,22 @@ html:focus-within {
 
 body {
   font-family: var(--font-ubuntu);
+  background-color: var(--alabaster);
+  color: var(--marine-blue);
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
   overflow-x: hidden;
   position: relative;
+
+}
+
+@media (min-width: 48em) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */

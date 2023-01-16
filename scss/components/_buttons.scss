@@ -1,0 +1,13 @@
+.btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  white-space: nowrap;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.25rem;
+}
+
+.btn--dark {
+  background-color: var(--marine-blue);
+  color: var(--white);
+}

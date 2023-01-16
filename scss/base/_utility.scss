@@ -2,6 +2,11 @@
   margin-top: var(--flow-space);
 }
 
+// Headings
+.primary-heading {
+  font-size: var(--font-size-400);
+}
+
 .font-size-400 {
   font-size: var(--font-size-400);
 }
@@ -16,4 +21,16 @@
 
 .font-size-100 {
   font-size: var(--font-size-100);
+}
+
+.background-white {
+  background-color: var(--white);
+}
+
+.text-gray {
+  color: var(--cool-gray);
+}
+
+.text-white {
+  color: var(--white);
 }
