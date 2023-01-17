@@ -59,16 +59,16 @@
             </ul>
         </nav>
     </section>
-    <section class="main">
+    <section class="main grid">
         <div class="main__body">
             <div class="info flow tab active-tab">
                 <h1 class="info__heading primary-heading">Personal info</h1>
                 <p class="info__text text-gray">Please provide your name, email address, and phone number.</p>
-                <form action="#" class="info__form flow">
+                <form action="#" id="info__form" class="info__form flow">
                     <div class="info__input-wrapper">
                         <label for="info__name" class="info__input-label">Name</label>
                         <input type="text" name="info__name" id="info__name" class="info__form-input"
-                               placeholder="e.g. Stephen King"/>
+                               placeholder="e.g. Stephen King" required/>
                     </div>
                     <div class="info__input-wrapper">
                         <label for="info__email" class="info__input-label">Email</label>
@@ -83,29 +83,61 @@
                 </form>
             </div>
 
-            <div class="plan flow tab">
+            <div class="plan flow tab active-tab">
                 <h1 class="plan__heading primary-heading">Select your plan</h1>
                 <p class="plan__text text-gray">You have the option of monthly or yearly billing.</p>
-                <form action="#" class="plan__form">
-                    <div class="plan__card">
-                        <label for="form__radio--arcade">1</label>
-                        <input type="radio" name="form__radio" id="form__radio--arcade">
-                    </div>
-                    <div>
-                        <label for="form__radio--advanced">2</label>
-                        <input type="radio" name="form__radio" id="form__radio--advanced">
-                    </div>
-                    <div>
-                        <label for="form__radio--pro">3</label>
-                        <input type="radio" name="form__radio" id="form__radio--pro">
-                    </div>
-                    <div>
-                        <label class="form__switch">
-                            <input type="checkbox">
-                            <span class="form__slider"></span>
+                <div class="plan__card-wrapper grid grid--3-columns">
+                    <label class="plan__card flex">
+                        <input type="radio" class="plan__card-radio" name="plan__card-radio" id="plan__card-radio--arcade">
+                        <img class="plan__card-image" src="/images/icon-arcade.svg" alt="">
+                        <span class="plan__card-description">
+                            <span class="plan__card-heading">
+                                Arcade
+                            </span>
+                            <span class="plan__card-price">$9/mo</span>
+                            <span class="plan__card-text">2 months free</span>
+                        </span>
+                    </label>
+
+                    <label class="plan__card flex">
+                        <input type="radio" class="plan__card-radio" name="plan__card-radio" id="plan__card-radio--advanced">
+                        <img class="plan__card-image" src="/images/icon-advanced.svg" alt="">
+                        <span class="plan__card-description">
+                            <span class="plan__card-heading">
+                                Advanced
+                            </span>
+                            <span class="plan__card-price">$12/mo</span>
+                            <span class="plan__card-text">2 months free</span>
+                        </span>
+                    </label>
+
+                    <label class="plan__card flex">
+                        <input type="radio" class="plan__card-radio" name="plan__card-radio" id="plan__card-radio--pro">
+                        <img class="plan__card-image" src="/images/icon-pro.svg" alt="">
+                        <span class="plan__card-description">
+                            <span class="plan__card-heading">
+                                Pro
+                            </span>
+                            <span class="plan__card-price">$15/mo</span>
+                            <span class="plan__card-text">2 months free</span>
+                        </span>
+                    </label>
+                </div>
+
+                <div class="plan__time">
+                    <label for="plan__time-month">Monthly</label>
+                    <label for="plan__time-year">Yearly</label>
+                    <div class="plan__time-radio-wrapper flex">
+                        <label class="plan__time-label flex flex--center" for="plan__time-month">
+                            <input type="radio" name="plan__time-radio" id="plan__time-month">
+                            <span class="plan__time-checkmark plan__time-active-checkmark"></span>
+                        </label>
+                        <label class="plan__time-label flex flex--center" for="plan__time-year">
+                            <input type="radio" name="plan__time-radio" id="plan__time-year">
+                            <span class="plan__time-checkmark"></span>
                         </label>
                     </div>
-                </form>
+                </div>
             </div>
 
             <!-- addon section start -->
@@ -138,11 +170,6 @@
                         <p>+$2/mo</p>
                     </div>
                 </div>
-
-                <div class="bottom">
-                    <a href="#"> Go Back</a>
-                    <button class="btn btn-next">Next Step</button>
-                </div>
             </div>
 
 
@@ -153,7 +180,7 @@
                     Double-check everything looks OK before confirming.
                 </div>
                 <div class="summary-boxes">
-                    <div>Arcade (MOnthly) <br/>Change</div>
+                    <div>Arcade (Monthly) <br/>Change</div>
                     <div>$9/mo</div>
                     <hr/>
                     <p>Online service</p>
@@ -164,10 +191,6 @@
                 <div class="total">
                     <p>Total(per month)</p>
                     <p>+$12/mo</p>
-                </div>
-                <div class="bottom">
-                    <a href="#" class="btn btn-back"> Go Back</a>
-                    <button class="btn btn-confirm">Confirm</button>
                 </div>
             </div>
 
@@ -180,13 +203,17 @@
             <button class="main__btn--confirm btn btn--dark">Confirm</button>
         </div>
 
+        <div class="input-wrapper">
+            <label>
+                Hello
+                <input type="radio" name="hey" id="hey1">
+            </label>
+            <label>
+                Hey
+                <input type="radio" name="hey" id="hey2">
+            </label>
 
-
-
-
-
-
-
+        </div>
     </section>
 </div>
 </body>

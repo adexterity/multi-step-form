@@ -93,6 +93,7 @@
 
   @media (min-width: 48em) {
     & {
+      background-color: var(--white);
       position: static;
       height: 100%;
     }
@@ -102,6 +103,10 @@
       width: 100%;
       border-radius: 0;
       box-shadow: none;
+    }
+
+    &__footer {
+      align-self: end;
     }
   }
 }
@@ -121,7 +126,14 @@
   }
 }
 
+// Tabs
+.tab {
+  display: none;
+}
 
+.active-tab {
+  display: block;
+}
 
 // 1. Info Page
 .info {
@@ -136,11 +148,59 @@
   }
 }
 
-
-.tab {
+// 2. Plan Page
+input[type='radio'] {
   display: none;
 }
 
-.active-tab {
+.plan {
+  &__card-description > span {
+    display: block;
+  }
+
+  &__time-label {
+    width: 1.8rem;
+    height: 1.8rem;
+    background-color: var(--marine-blue);
+    position: relative;
+    cursor: pointer;
+  }
+
+  &__time-label:nth-child(1) {
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+  }
+
+  &__time-label:nth-child(2) {
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+  }
+
+  &__time-checkmark {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    background-color: var(--white);
+    display: none;
+  }
+
+  &__time-checkmark.plan__time-active-checkmark {
+    display: inline-block;
+  }
+
+  @media (min-width: 48em) {
+    &__card {
+      flex-direction: column;
+    }
+
+    &__card-image {
+      max-width: 50%;
+    }
+
+  }
+}
+
+input[type='radio'] {
   display: block;
 }
+

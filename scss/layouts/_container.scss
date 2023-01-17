@@ -4,3 +4,10 @@
   margin: 0 auto;
   position: relative;
 }
+
+
+@media (min-width: 48em) {
+  .container {
+    min-height: 36rem;
+  }
+}

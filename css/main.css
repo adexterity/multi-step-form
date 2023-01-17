@@ -144,6 +144,11 @@ body {
   position: relative;
 }
 
+@media (min-width: 48em) {
+  .container {
+    min-height: 36rem;
+  }
+}
 .flex {
   display: flex;
 }
@@ -193,9 +198,16 @@ body {
   grid-template-columns: 1fr;
 }
 
+.grid--3-columns {
+  grid-template-columns: 1fr;
+}
+
 @media (min-width: 48em) {
   .grid--2-columns {
     grid-template-columns: 30fr 70fr;
+  }
+  .grid--3-columns {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 .nav {
@@ -274,6 +286,7 @@ body {
 }
 @media (min-width: 48em) {
   .main {
+    background-color: var(--white);
     position: static;
     height: 100%;
   }
@@ -282,6 +295,9 @@ body {
     width: 100%;
     border-radius: 0;
     box-shadow: none;
+  }
+  .main__footer {
+    align-self: end;
   }
 }
 
@@ -295,6 +311,14 @@ body {
   display: none;
 }
 
+.tab {
+  display: none;
+}
+
+.active-tab {
+  display: block;
+}
+
 .info__input-label {
   display: block;
 }
@@ -304,11 +328,48 @@ body {
   border-radius: 0.25rem;
 }
 
-.tab {
+input[type=radio] {
   display: none;
 }
 
-.active-tab {
+.plan__card-description > span {
+  display: block;
+}
+.plan__time-label {
+  width: 1.8rem;
+  height: 1.8rem;
+  background-color: var(--marine-blue);
+  position: relative;
+  cursor: pointer;
+}
+.plan__time-label:nth-child(1) {
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+}
+.plan__time-label:nth-child(2) {
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+.plan__time-checkmark {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: var(--white);
+  display: none;
+}
+.plan__time-checkmark.plan__time-active-checkmark {
+  display: inline-block;
+}
+@media (min-width: 48em) {
+  .plan__card {
+    flex-direction: column;
+  }
+  .plan__card-image {
+    max-width: 50%;
+  }
+}
+
+input[type=radio] {
   display: block;
 }
 
