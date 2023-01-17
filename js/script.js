@@ -80,41 +80,28 @@ const planTimeCheckmarks = document.querySelectorAll('.plan__time-checkmark');
 const planRadioYear = document.querySelector('#plan__time-year')
 const planRadioMonth = document.querySelector('#plan__time-month')
 
-const changeActivePlanBackground = () => {
-    for (const planCardRadio of planCardRadios) {
-        console.log(planCardRadio.value);
-    }
-}
-changeActivePlanBackground();
+let currentCardPlan = 'arcade';
 
-// Radio for plan card
-planRadioArcade.addEventListener('click', () => {
-   changeActivePlanBackground();
-});
-
-planRadioAdvanced.addEventListener('click', () => {
-    changeActivePlanBackground();
-});
-
-planRadioPro.addEventListener('click', () => {
-    changeActivePlanBackground();
+planCardRadios.forEach((planRadio, index) => {
+    planRadio.addEventListener('click', () => {
+        currentCardPlan = planRadio.value;
+        console.log(currentCardPlan);
+    })
 });
 
 // Radio for plan time
-let currentPlan = 0;
+let currentTimePlan = 'monthly';
 planRadioMonth.addEventListener('click', () => {
-    currentPlan = 0;
+    currentTimePlan = 'monthly';
     planTimeCheckmarks[0].classList.add('plan__time-active-checkmark');
     planTimeCheckmarks[1].classList.remove('plan__time-active-checkmark');
 });
 
 planRadioYear.addEventListener('click', () => {
-    currentPlan = 1;
+    currentTimePlan = 'yearly';
     planTimeCheckmarks[0].classList.remove('plan__time-active-checkmark');
     planTimeCheckmarks[1].classList.add('plan__time-active-checkmark');
 });
-
-
 
 
 // // Display active tab

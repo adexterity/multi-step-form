@@ -88,7 +88,12 @@
                 <p class="plan__text text-gray">You have the option of monthly or yearly billing.</p>
                 <div class="plan__card-wrapper grid grid--3-columns">
                     <label class="plan__card flex">
-                        <input type="radio" class="plan__card-radio" name="plan__card-radio" id="plan__card-radio--arcade">
+                        <input type="radio"
+                               class="plan__card-radio"
+                               name="plan__card-radio"
+                               id="plan__card-radio--arcade"
+                               value="arcade"
+                        />
                         <img class="plan__card-image" src="/images/icon-arcade.svg" alt="">
                         <span class="plan__card-description">
                             <span class="plan__card-heading">
@@ -100,7 +105,13 @@
                     </label>
 
                     <label class="plan__card flex">
-                        <input type="radio" class="plan__card-radio" name="plan__card-radio" id="plan__card-radio--advanced">
+                        <input
+                                type="radio"
+                                class="plan__card-radio"
+                                name="plan__card-radio"
+                                id="plan__card-radio--advanced"
+                                value="advanced"
+                        />
                         <img class="plan__card-image" src="/images/icon-advanced.svg" alt="">
                         <span class="plan__card-description">
                             <span class="plan__card-heading">
@@ -112,7 +123,12 @@
                     </label>
 
                     <label class="plan__card flex">
-                        <input type="radio" class="plan__card-radio" name="plan__card-radio" id="plan__card-radio--pro">
+                        <input type="radio"
+                               class="plan__card-radio"
+                               name="plan__card-radio"
+                               id="plan__card-radio--pro"
+                               value="pro"
+                        />
                         <img class="plan__card-image" src="/images/icon-pro.svg" alt="">
                         <span class="plan__card-description">
                             <span class="plan__card-heading">
@@ -129,11 +145,20 @@
                     <label for="plan__time-year">Yearly</label>
                     <div class="plan__time-radio-wrapper flex">
                         <label class="plan__time-label flex flex--center" for="plan__time-month">
-                            <input type="radio" name="plan__time-radio" id="plan__time-month">
+                            <input type="radio"
+                                   name="plan__time-radio"
+                                   id="plan__time-month"
+                                   value="monthly"
+                            />
                             <span class="plan__time-checkmark plan__time-active-checkmark"></span>
                         </label>
                         <label class="plan__time-label flex flex--center" for="plan__time-year">
-                            <input type="radio" name="plan__time-radio" id="plan__time-year">
+                            <input
+                                    type="radio"
+                                    name="plan__time-radio"
+                                    id="plan__time-year"
+                                    value="yearly"
+                            />
                             <span class="plan__time-checkmark"></span>
                         </label>
                     </div>
