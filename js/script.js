@@ -117,7 +117,6 @@ planTimeRadios.forEach((planRadio, index) => {
     })
 })
 
-// // Display active tab
 //
 // showTab(currentTab);
 //
