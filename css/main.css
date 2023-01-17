@@ -332,6 +332,9 @@ input[type=radio] {
   display: none;
 }
 
+.plan__card.active-card {
+  border: 1px solid var(--marine-blue);
+}
 .plan__card-description > span {
   display: block;
 }
@@ -357,7 +360,7 @@ input[type=radio] {
   background-color: var(--white);
   display: none;
 }
-.plan__time-checkmark.plan__time-active-checkmark {
+.plan__time-checkmark.active-checkmark {
   display: inline-block;
 }
 @media (min-width: 48em) {
@@ -367,10 +370,6 @@ input[type=radio] {
   .plan__card-image {
     max-width: 50%;
   }
-}
-
-input[type=radio] {
-  display: block;
 }
 
 /*# sourceMappingURL=main.css.map */

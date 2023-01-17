@@ -71,38 +71,51 @@ btnPrev.addEventListener('click', () => {
 
 
 // Plan page
-const planRadioArcade = document.querySelector('#plan__card-radio--arcade');
-const planRadioAdvanced = document.querySelector('#plan__card-radio--advanced');
-const planRadioPro = document.querySelector('#plan__card-radio--pro');
+const planCards = document.querySelectorAll('.plan__card');
 const planCardRadios = document.querySelectorAll('.plan__card-radio')
-const planTimeLabels = document.querySelectorAll('.plan__time-label');
+const planTimeRadios = document.querySelectorAll('.plan__time-radio');
 const planTimeCheckmarks = document.querySelectorAll('.plan__time-checkmark');
-const planRadioYear = document.querySelector('#plan__time-year')
-const planRadioMonth = document.querySelector('#plan__time-month')
 
+// Plan Card radio
 let currentCardPlan = 'arcade';
-
 planCardRadios.forEach((planRadio, index) => {
+    let currentCardIndex = 0;
+    const updateCard = () => {
+        planCards.forEach((planCard, index) => {
+            if (currentCardIndex === index) {
+                planCard.classList.add('active-card');
+            } else {
+                planCard.classList.remove('active-card');
+            }
+        })
+    };
     planRadio.addEventListener('click', () => {
         currentCardPlan = planRadio.value;
-        console.log(currentCardPlan);
-    })
+        currentCardIndex = index;
+        updateCard();
+    });
 });
 
 // Radio for plan time
 let currentTimePlan = 'monthly';
-planRadioMonth.addEventListener('click', () => {
-    currentTimePlan = 'monthly';
-    planTimeCheckmarks[0].classList.add('plan__time-active-checkmark');
-    planTimeCheckmarks[1].classList.remove('plan__time-active-checkmark');
-});
+planTimeRadios.forEach((planRadio, index) => {
+    let currentActivePlan = 0;
+    const updateTimePlan= () => {
+      planTimeCheckmarks.forEach((planTimeCheckmark, index) => {
+          if (currentActivePlan === index) {
+              planTimeCheckmark.classList.add('active-checkmark');
+          } else {
+              planTimeCheckmark.classList.remove('active-checkmark');
+          }
+      })
+    }
 
-planRadioYear.addEventListener('click', () => {
-    currentTimePlan = 'yearly';
-    planTimeCheckmarks[0].classList.remove('plan__time-active-checkmark');
-    planTimeCheckmarks[1].classList.add('plan__time-active-checkmark');
-});
-
+    planRadio.addEventListener('click', () => {
+        currentTimePlan = planRadio.value;
+        currentActivePlan = index;
+        updateTimePlan();
+    })
+})
 
 // // Display active tab
 //

@@ -154,6 +154,10 @@ input[type='radio'] {
 }
 
 .plan {
+  &__card.active-card {
+    border: 1px solid var(--marine-blue);
+  }
+
   &__card-description > span {
     display: block;
   }
@@ -200,7 +204,4 @@ input[type='radio'] {
   }
 }
 
-input[type='radio'] {
-  display: block;
-}
 

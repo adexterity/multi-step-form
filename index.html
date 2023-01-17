@@ -67,27 +67,41 @@
                 <form action="#" id="info__form" class="info__form flow">
                     <div class="info__input-wrapper">
                         <label for="info__name" class="info__input-label">Name</label>
-                        <input type="text" name="info__name" id="info__name" class="info__form-input"
-                               placeholder="e.g. Stephen King" required/>
+                        <input type="text"
+                               name="info__name"
+                               id="info__name"
+                               class="info__form-input"
+                               placeholder="e.g. Stephen King"
+                        />
                     </div>
                     <div class="info__input-wrapper">
                         <label for="info__email" class="info__input-label">Email</label>
-                        <input type="email" name="info__email" id="info__email" class="info__form-input"
-                               placeholder="e.g. stephenking@lorem.com"/>
+                        <input
+                                type="email"
+                                name="info__email"
+                                id="info__email"
+                                class="info__form-input"
+                                placeholder="e.g. stephenking@lorem.com"
+                        />
                     </div>
                     <div class="info__input-wrapper">
                         <label for="info__number" class="info__input-label">Phone Number</label>
-                        <input type="number" name="info__number" id="info__number" class="info__form-input"
-                               placeholder="e.g. +1234567890">
+                        <input
+                                type="number"
+                                name="info__number"
+                                id="info__number"
+                                class="info__form-input"
+                                placeholder="e.g. +1234567890"
+                        />
                     </div>
                 </form>
             </div>
 
-            <div class="plan flow tab active-tab">
+            <div class="plan flow tab">
                 <h1 class="plan__heading primary-heading">Select your plan</h1>
                 <p class="plan__text text-gray">You have the option of monthly or yearly billing.</p>
                 <div class="plan__card-wrapper grid grid--3-columns">
-                    <label class="plan__card flex">
+                    <label class="plan__card active-card flex">
                         <input type="radio"
                                class="plan__card-radio"
                                name="plan__card-radio"
@@ -147,15 +161,17 @@
                         <label class="plan__time-label flex flex--center" for="plan__time-month">
                             <input type="radio"
                                    name="plan__time-radio"
+                                   class="plan__time-radio"
                                    id="plan__time-month"
                                    value="monthly"
                             />
-                            <span class="plan__time-checkmark plan__time-active-checkmark"></span>
+                            <span class="plan__time-checkmark active-checkmark"></span>
                         </label>
                         <label class="plan__time-label flex flex--center" for="plan__time-year">
                             <input
                                     type="radio"
                                     name="plan__time-radio"
+                                    class="plan__time-radio"
                                     id="plan__time-year"
                                     value="yearly"
                             />
@@ -167,13 +183,13 @@
 
             <!-- addon section start -->
             <div class="addon tab">
-                <h2 class="addon-heading">Pick add-ons</h2>
-                <p class="addons-text">Add-ons enhance your gaming experience</p>
+                <h2 class="addon__heading primary-heading">Pick add-ons</h2>
+                <p class="addon__text">Add-ons enhance your gaming experience</p>
                 <div class="addon-boxes">
                     <div class="addon-box">
                         <input type="checkbox"/>
                         <div class="addon-box-text">
-                            Online service <br/>
+                            Online service
                             Access to multiplayer games
                         </div>
                         <p>+$1/mo</p>
@@ -181,7 +197,7 @@
                     <div class="addon-box">
                         <input type="checkbox"/>
                         <div class="addon-box-text">
-                            Larger storage <br/>
+                            Larger storage
                             Extra 1TB of cloud save
                         </div>
                         <p>+$2/mo</p>
@@ -189,7 +205,7 @@
                     <div class="addon-box">
                         <input type="checkbox"/>
                         <div class="addon-box-text">
-                            /customizable profile <br/>
+                            Customizable profile
                             Custom theme on your profile
                         </div>
                         <p>+$2/mo</p>
@@ -226,18 +242,6 @@
             <button class="main__btn--prev btn btn-light">Go back</button>
             <button class="main__btn--next btn btn--dark">Next Step</button>
             <button class="main__btn--confirm btn btn--dark">Confirm</button>
-        </div>
-
-        <div class="input-wrapper">
-            <label>
-                Hello
-                <input type="radio" name="hey" id="hey1">
-            </label>
-            <label>
-                Hey
-                <input type="radio" name="hey" id="hey2">
-            </label>
-
         </div>
     </section>
 </div>
