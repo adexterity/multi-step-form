@@ -158,6 +158,13 @@ input[type='radio'] {
     border: 1px solid var(--marine-blue);
   }
 
+  &__card {
+    border: 1px solid var(--light-gray);
+    padding: 1rem;
+    border-radius: 0.4rem;
+    cursor: pointer;
+  }
+
   &__card-description > span {
     display: block;
   }
@@ -188,7 +195,7 @@ input[type='radio'] {
     display: none;
   }
 
-  &__time-checkmark.plan__time-active-checkmark {
+  &__time-checkmark.active-checkmark {
     display: inline-block;
   }
 
@@ -200,8 +207,18 @@ input[type='radio'] {
     &__card-image {
       max-width: 50%;
     }
-
   }
+}
+
+// Addon tab
+.addon {
+  &__input-wrapper {
+    display: block;
+  }
+}
+
+.error {
+  border: 1px solid red;
 }
 
 

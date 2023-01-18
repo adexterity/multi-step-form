@@ -1,5 +1,12 @@
 'use strict';
 
+// Data
+const planPrice = {
+    arcade: 9,
+    advanced: 12,
+    pro: 15
+};
+
 // Elements
 const tabs = document.querySelectorAll('.tab');
 const btnNext = document.querySelector('.main__btn--next');
@@ -49,14 +56,22 @@ const changeCurrentTab = () => {
     })
 }
 
+const infoName = document.querySelector('#info__name');
+const infoEmail = document.querySelector('#info__email');
+const infoNumber = document.querySelector('#info__number');
+
+// Form Validation
+
+
 // When the user clicks on next button
-btnNext.addEventListener('click', () => {
-    currentTab++;
-    if (currentTab > 3) {
-        currentTab = 3;
-    }
-    changeCurrentTab();
-    changeStep();
+btnNext.addEventListener('click', (event) => {
+    // event.preventDefault();
+    // currentTab++;
+    // if (currentTab > 3) {
+    //     currentTab = 3;
+    // }
+    // changeCurrentTab();
+    // changeStep();
 });
 
 // When the user clicks on prev button
@@ -100,14 +115,14 @@ planCardRadios.forEach((planRadio, index) => {
 let currentTimePlan = 'monthly';
 planTimeRadios.forEach((planRadio, index) => {
     let currentActivePlan = 0;
-    const updateTimePlan= () => {
-      planTimeCheckmarks.forEach((planTimeCheckmark, index) => {
-          if (currentActivePlan === index) {
-              planTimeCheckmark.classList.add('active-checkmark');
-          } else {
-              planTimeCheckmark.classList.remove('active-checkmark');
-          }
-      })
+    const updateTimePlan = () => {
+        planTimeCheckmarks.forEach((planTimeCheckmark, index) => {
+            if (currentActivePlan === index) {
+                planTimeCheckmark.classList.add('active-checkmark');
+            } else {
+                planTimeCheckmark.classList.remove('active-checkmark');
+            }
+        })
     }
 
     planRadio.addEventListener('click', () => {
@@ -117,23 +132,4 @@ planTimeRadios.forEach((planRadio, index) => {
     })
 })
 
-//
-// showTab(currentTab);
-//
-// function showTab(n) {
-//     let tab = document.getElementsByClassName('tab');
-//
-//     // Show active tab
-//     tab[n].style.display = 'block'
-//
-//     // Show accurate button
-//     n == 0
-//         ? document.getElementById('prevBtn').style.display = 'none'
-//         : document.getElementById('nextBtn').style.display = 'inline';
-//
-//     n == (tab.length - 1)
-//         ? document.getElementById('nextBtn').innerHTML = 'Confirm'
-//         : document.getElementById('nextBtn').innerHTML = 'Next Step';
-// }
-//
 

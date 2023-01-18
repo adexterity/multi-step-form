@@ -60,189 +60,176 @@
         </nav>
     </section>
     <section class="main grid">
-        <div class="main__body">
-            <div class="info flow tab active-tab">
-                <h1 class="info__heading primary-heading">Personal info</h1>
-                <p class="info__text text-gray">Please provide your name, email address, and phone number.</p>
-                <form action="#" id="info__form" class="info__form flow">
-                    <div class="info__input-wrapper">
-                        <label for="info__name" class="info__input-label">Name</label>
-                        <input type="text"
-                               name="info__name"
-                               id="info__name"
-                               class="info__form-input"
-                               placeholder="e.g. Stephen King"
-                        />
-                    </div>
-                    <div class="info__input-wrapper">
-                        <label for="info__email" class="info__input-label">Email</label>
-                        <input
-                                type="email"
-                                name="info__email"
-                                id="info__email"
-                                class="info__form-input"
-                                placeholder="e.g. stephenking@lorem.com"
-                        />
-                    </div>
-                    <div class="info__input-wrapper">
-                        <label for="info__number" class="info__input-label">Phone Number</label>
-                        <input
-                                type="number"
-                                name="info__number"
-                                id="info__number"
-                                class="info__form-input"
-                                placeholder="e.g. +1234567890"
-                        />
-                    </div>
-                </form>
-            </div>
+        <form action="#" class="form">
+            <div class="main__body">
+                <div class="info flow tab active-tab">
+                    <h1 class="info__heading primary-heading">Personal info</h1>
+                    <p class="info__text text-gray">Please provide your name, email address, and phone number.</p>
+                    <form action="#" id="info__form" class="info__form flow">
+                        <div class="info__input-wrapper">
+                            <label for="info__name" class="info__input-label">Name</label>
+                            <input type="text"
+                                   name="info__name"
+                                   id="info__name"
+                                   class="info__form-input"
+                                   placeholder="e.g. Stephen King"
+                            />
+                        </div>
+                        <div class="info__input-wrapper">
+                            <label for="info__email" class="info__input-label">Email</label>
+                            <input
+                                    type="email"
+                                    name="info__email"
+                                    id="info__email"
+                                    class="info__form-input"
+                                    placeholder="e.g. stephenking@lorem.com"
+                            />
+                        </div>
+                        <div class="info__input-wrapper">
+                            <label for="info__number" class="info__input-label">Phone Number</label>
+                            <input
+                                    type="number"
+                                    name="info__number"
+                                    id="info__number"
+                                    class="info__form-input"
+                                    placeholder="e.g. +1234567890"
+                            />
+                        </div>
+                    </form>
+                </div>
 
-            <div class="plan flow tab">
-                <h1 class="plan__heading primary-heading">Select your plan</h1>
-                <p class="plan__text text-gray">You have the option of monthly or yearly billing.</p>
-                <div class="plan__card-wrapper grid grid--3-columns">
-                    <label class="plan__card active-card flex">
-                        <input type="radio"
-                               class="plan__card-radio"
-                               name="plan__card-radio"
-                               id="plan__card-radio--arcade"
-                               value="arcade"
-                        />
-                        <img class="plan__card-image" src="/images/icon-arcade.svg" alt="">
-                        <span class="plan__card-description">
+                <div class="plan flow tab">
+                    <h1 class="plan__heading primary-heading">Select your plan</h1>
+                    <p class="plan__text text-gray">You have the option of monthly or yearly billing.</p>
+                    <div class="plan__card-wrapper grid grid--3-columns grid--gap">
+                        <label class="plan__card active-card flex">
+                            <input type="radio"
+                                   class="plan__card-radio"
+                                   name="plan__card-radio"
+                                   id="plan__card-radio--arcade"
+                                   value="arcade"
+                            />
+                            <img class="plan__card-image" src="/images/icon-arcade.svg" alt="">
+                            <span class="plan__card-description">
                             <span class="plan__card-heading">
                                 Arcade
                             </span>
                             <span class="plan__card-price">$9/mo</span>
                             <span class="plan__card-text">2 months free</span>
                         </span>
-                    </label>
+                        </label>
 
-                    <label class="plan__card flex">
-                        <input
-                                type="radio"
-                                class="plan__card-radio"
-                                name="plan__card-radio"
-                                id="plan__card-radio--advanced"
-                                value="advanced"
-                        />
-                        <img class="plan__card-image" src="/images/icon-advanced.svg" alt="">
-                        <span class="plan__card-description">
+                        <label class="plan__card flex">
+                            <input
+                                    type="radio"
+                                    class="plan__card-radio"
+                                    name="plan__card-radio"
+                                    id="plan__card-radio--advanced"
+                                    value="advanced"
+                            />
+                            <img class="plan__card-image" src="/images/icon-advanced.svg" alt="">
+                            <span class="plan__card-description">
                             <span class="plan__card-heading">
                                 Advanced
                             </span>
                             <span class="plan__card-price">$12/mo</span>
                             <span class="plan__card-text">2 months free</span>
                         </span>
-                    </label>
+                        </label>
 
-                    <label class="plan__card flex">
-                        <input type="radio"
-                               class="plan__card-radio"
-                               name="plan__card-radio"
-                               id="plan__card-radio--pro"
-                               value="pro"
-                        />
-                        <img class="plan__card-image" src="/images/icon-pro.svg" alt="">
-                        <span class="plan__card-description">
+                        <label class="plan__card flex">
+                            <input type="radio"
+                                   class="plan__card-radio"
+                                   name="plan__card-radio"
+                                   id="plan__card-radio--pro"
+                                   value="pro"
+                            />
+                            <img class="plan__card-image" src="/images/icon-pro.svg" alt="">
+                            <span class="plan__card-description">
                             <span class="plan__card-heading">
                                 Pro
                             </span>
                             <span class="plan__card-price">$15/mo</span>
                             <span class="plan__card-text">2 months free</span>
                         </span>
-                    </label>
+                        </label>
+                    </div>
+
+                    <div class="plan__time">
+                        <label for="plan__time-month">Monthly</label>
+                        <label for="plan__time-year">Yearly</label>
+                        <div class="plan__time-radio-wrapper flex">
+                            <label class="plan__time-label flex flex--center" for="plan__time-month">
+                                <input type="radio"
+                                       name="plan__time-radio"
+                                       class="plan__time-radio"
+                                       id="plan__time-month"
+                                       value="monthly"
+                                />
+                                <span class="plan__time-checkmark active-checkmark"></span>
+                            </label>
+                            <label class="plan__time-label flex flex--center" for="plan__time-year">
+                                <input
+                                        type="radio"
+                                        name="plan__time-radio"
+                                        class="plan__time-radio"
+                                        id="plan__time-year"
+                                        value="yearly"
+                                />
+                                <span class="plan__time-checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="plan__time">
-                    <label for="plan__time-month">Monthly</label>
-                    <label for="plan__time-year">Yearly</label>
-                    <div class="plan__time-radio-wrapper flex">
-                        <label class="plan__time-label flex flex--center" for="plan__time-month">
-                            <input type="radio"
-                                   name="plan__time-radio"
-                                   class="plan__time-radio"
-                                   id="plan__time-month"
-                                   value="monthly"
-                            />
-                            <span class="plan__time-checkmark active-checkmark"></span>
+                <!-- addon section start -->
+                <div class="addon tab">
+                    <h2 class="addon__heading primary-heading">Pick add-ons</h2>
+                    <p class="addon__text text-gray">Add-ons enhance your gaming experience</p>
+                    <div class="addon__inputs">
+                        <label class="addon__input-wrapper">
+                            Service:<input type="checkbox" name="addon__input" id="addon__checkbox--service">
                         </label>
-                        <label class="plan__time-label flex flex--center" for="plan__time-year">
-                            <input
-                                    type="radio"
-                                    name="plan__time-radio"
-                                    class="plan__time-radio"
-                                    id="plan__time-year"
-                                    value="yearly"
-                            />
-                            <span class="plan__time-checkmark"></span>
+                        <label class="addon__input-wrapper">
+                            Storage: <input type="checkbox" name="addon__input" id="addon__checkbox--storage">
+                        </label>
+                        <label class="addon__input-wrapper">
+                            Profile <input type="checkbox" name="addon__input" id="addon__checkbox--profile">
                         </label>
                     </div>
                 </div>
-            </div>
 
-            <!-- addon section start -->
-            <div class="addon tab">
-                <h2 class="addon__heading primary-heading">Pick add-ons</h2>
-                <p class="addon__text">Add-ons enhance your gaming experience</p>
-                <div class="addon-boxes">
-                    <div class="addon-box">
-                        <input type="checkbox"/>
-                        <div class="addon-box-text">
-                            Online service
-                            Access to multiplayer games
-                        </div>
+
+                <!--summary tab-->
+                <div class="summary tab">
+                    <h2 class="summary-heading">Finishing up</h2>
+                    <div class="summary-text">
+                        Double-check everything looks OK before confirming.
+                    </div>
+                    <div class="summary-boxes">
+                        <div>Arcade (Monthly) <br/>Change</div>
+                        <div>$9/mo</div>
+                        <hr/>
+                        <p>Online service</p>
                         <p>+$1/mo</p>
-                    </div>
-                    <div class="addon-box">
-                        <input type="checkbox"/>
-                        <div class="addon-box-text">
-                            Larger storage
-                            Extra 1TB of cloud save
-                        </div>
+                        <p>Larger storage</p>
                         <p>+$2/mo</p>
                     </div>
-                    <div class="addon-box">
-                        <input type="checkbox"/>
-                        <div class="addon-box-text">
-                            Customizable profile
-                            Custom theme on your profile
-                        </div>
-                        <p>+$2/mo</p>
+                    <div class="total">
+                        <p>Total(per month)</p>
+                        <p>+$12/mo</p>
                     </div>
                 </div>
+
+
             </div>
 
-
-            <!--summary tab-->
-            <div class="summary tab">
-                <h2 class="summary-heading">Finishing up</h2>
-                <div class="summary-text">
-                    Double-check everything looks OK before confirming.
-                </div>
-                <div class="summary-boxes">
-                    <div>Arcade (Monthly) <br/>Change</div>
-                    <div>$9/mo</div>
-                    <hr/>
-                    <p>Online service</p>
-                    <p>+$1/mo</p>
-                    <p>Larger storage</p>
-                    <p>+$2/mo</p>
-                </div>
-                <div class="total">
-                    <p>Total(per month)</p>
-                    <p>+$12/mo</p>
-                </div>
+            <div class="main__footer flex flex--justify-space">
+                <button class="main__btn--prev btn btn-light">Go back</button>
+                <button class="main__btn--next btn btn--dark">Next Step</button>
+                <button class="main__btn--confirm btn btn--dark">Confirm</button>
             </div>
-
-
-        </div>
-
-        <div class="main__footer flex flex--justify-space">
-            <button class="main__btn--prev btn btn-light">Go back</button>
-            <button class="main__btn--next btn btn--dark">Next Step</button>
-            <button class="main__btn--confirm btn btn--dark">Confirm</button>
-        </div>
+        </form>
     </section>
 </div>
 </body>

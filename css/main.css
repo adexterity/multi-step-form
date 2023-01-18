@@ -335,6 +335,12 @@ input[type=radio] {
 .plan__card.active-card {
   border: 1px solid var(--marine-blue);
 }
+.plan__card {
+  border: 1px solid var(--light-gray);
+  padding: 1rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+}
 .plan__card-description > span {
   display: block;
 }
@@ -370,6 +376,14 @@ input[type=radio] {
   .plan__card-image {
     max-width: 50%;
   }
+}
+
+.addon__input-wrapper {
+  display: block;
+}
+
+.error {
+  border: 1px solid red;
 }
 
 /*# sourceMappingURL=main.css.map */
